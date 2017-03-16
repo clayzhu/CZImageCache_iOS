@@ -37,12 +37,12 @@
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
 	NSString *cachesDirectory = [paths objectAtIndex:0];
 	self.cachePath = cachesDirectory;
-	// 图片缓存到沙盒 Caches 的 CachesImage 目录中
+	// 图片缓存到沙盒 Caches 的 CachesImage 目录中，路径为 /Library/Caches/ImageCache
 	NSString *dataPath = [cachesDirectory stringByAppendingPathComponent:@"ImageCache"];
 	NSError *error;
 	BOOL isDirectory = YES;
 	if (![[NSFileManager defaultManager] fileExistsAtPath:dataPath isDirectory:&isDirectory])
-		[[NSFileManager defaultManager] createDirectoryAtPath:dataPath withIntermediateDirectories:NO attributes:nil error:&error];
+		[[NSFileManager defaultManager] createDirectoryAtPath:dataPath withIntermediateDirectories:NO attributes:nil error:&error];	// 没有 ImageCache 文件夹的话，创建一个
 	return dataPath;
 }
 

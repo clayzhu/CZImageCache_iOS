@@ -15,19 +15,19 @@
 + (instancetype)sharedInstance;
 
 #pragma mark - 计算、清理缓存
-/** 计算所有缓存的大小，单位为 M */
+/** 计算所有缓存的大小，单位为 M，路径为 /Library/Caches */
 - (CGFloat)cacheSize;
-/** 计算图片缓存的大小，单位为 M */
+/** 计算图片缓存的大小，单位为 M，路径为 /Library/Caches/ImageCache */
 - (CGFloat)imageCacheSize;
 
-/** 删除所有缓存 */
+/** 删除所有缓存，路径为 /Library/Caches */
 - (void)clearCacheWithCompletion:(void (^)(void))completion;
-/** 删除图片缓存 */
+/** 删除图片缓存，路径为 /Library/Caches/ImageCache */
 - (void)clearImageCacheWithCompletion:(void (^)(void))completion;
 
 #pragma mark - 对图片缓存
 /**
- *  根据图片 URL 缓存图片到沙盒 Caches/ImageCache 目录中。通过图片 URL 缓存
+ *  根据图片 URL 缓存图片到沙盒 /Library/Caches/ImageCache 目录中。通过图片 URL 缓存
  *
  *  @param image   需要缓存的图片
  *  @param url     图片 URL
