@@ -13,6 +13,7 @@
 		18E4E2951E7A631D0058716B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E4E2931E7A631D0058716B /* Main.storyboard */; };
 		18E4E2971E7A631D0058716B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E4E2961E7A631D0058716B /* Assets.xcassets */; };
 		18E4E29A1E7A631D0058716B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E4E2981E7A631D0058716B /* LaunchScreen.storyboard */; };
+		18E4E2C71E7A64640058716B /* CZImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4E2C61E7A64640058716B /* CZImageCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		18E4E2961E7A631D0058716B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18E4E2991E7A631D0058716B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18E4E29B1E7A631D0058716B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18E4E2C51E7A64640058716B /* CZImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZImageCache.h; sourceTree = "<group>"; };
+		18E4E2C61E7A64640058716B /* CZImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZImageCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				18E4E2891E7A631D0058716B /* CZImageCacheDemo */,
+				18E4E2C41E7A64540058716B /* CZImageCache */,
 				18E4E2881E7A631D0058716B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +81,15 @@
 				18E4E28B1E7A631D0058716B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18E4E2C41E7A64540058716B /* CZImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				18E4E2C51E7A64640058716B /* CZImageCache.h */,
+				18E4E2C61E7A64640058716B /* CZImageCache.m */,
+			);
+			path = CZImageCache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E4E2921E7A631D0058716B /* ViewController.m in Sources */,
+				18E4E2C71E7A64640058716B /* CZImageCache.m in Sources */,
 				18E4E28F1E7A631D0058716B /* AppDelegate.m in Sources */,
 				18E4E28C1E7A631D0058716B /* main.m in Sources */,
 			);
