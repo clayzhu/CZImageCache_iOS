@@ -119,7 +119,7 @@
 
 #pragma mark - 对图片缓存
 - (BOOL)saveImage:(UIImage *)image imageURL:(NSString *)url {
-	NSString *imageTitle = [url stringByReplacingOccurrencesOfString:@"/" withString:@"%2f"];
+	NSString *imageTitle = [self escapeURLCharacter:url];
 	NSString *imagePath = [self.imageCachePath stringByAppendingPathComponent:imageTitle];
 //	NSData *imageData = UIImagePNGRepresentation(image);
 	NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
@@ -132,7 +132,7 @@
 		 placeholderImage:(UIImage *)placeholderImage
 				  success:(void (^)(UIImage *image))success {
 	// 先去沙盒里去寻找是否有这个 URL 对应的图片
-	NSString *imageTitle = [url stringByReplacingOccurrencesOfString:@"/" withString:@"%2f"];
+	NSString *imageTitle = [self escapeURLCharacter:url];
 	NSString *imagePath = [self.imageCachePath stringByAppendingPathComponent:imageTitle];
 	UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
 	if (image) {	// 缓存中有该图片
@@ -163,6 +163,14 @@
 			});
 		});
 	}
+}
+
+/** 对 URL 中的特殊字符转义，防止为文件命名时，保存文件失败 */
+- (NSString *)escapeURLCharacter:(NSString *)url {
+	NSString *urlEscape;
+	urlEscape = [url stringByReplacingOccurrencesOfString:@"/" withString:@"%2f"];
+	urlEscape = [urlEscape stringByReplacingOccurrencesOfString:@":" withString:@"%3a"];
+	return urlEscape;
 }
 
 @end
