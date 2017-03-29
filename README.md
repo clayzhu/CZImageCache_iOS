@@ -21,3 +21,7 @@ CZImageCache_iOS 提供了关于图片缓存的多种功能：
 
 [下载 CZImageCache_iOS](https://github.com/clayzhu/CZImageCache_iOS/archive/master.zip)，将 `/CZImageCacheDemo/CZImageCache` 文件夹拖入项目中，记得在 `Destination: Copy items if needed` 前面打勾。
 
+## 3. 说明
+
+`/CZImageCacheDemo/CZImageCache` 文件夹下的 `CZImageCache.h`、`CZImageCache.m`，是主要实现文件。
+
