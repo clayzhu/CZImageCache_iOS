@@ -26,3 +26,5 @@ CZImageCache_iOS 提供了关于图片缓存的多种功能：
 
 `/CZImageCacheDemo/CZImageCache` 文件夹下的 `CZImageCache.h`、`CZImageCache.m`，是主要实现文件。
 
+`CZImageCache` 使用单例模式构建，图片路径设置在 iOS 应用沙盒的 `/Library/Caches/ImageCache` 目录下，并且可以按需要计算和清理图片缓存或整个 `Caches` 文件夹缓存的大小。
+
