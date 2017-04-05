@@ -45,8 +45,8 @@
  *  @param success          缓存中无图片，通过网络下载图片成功后的 block
  */
 - (void)imageForImageView:(UIImageView *)imageView
-				 imageURL:(NSString *)url
-		 placeholderImage:(UIImage *)placeholderImage
-				  success:(void (^)(UIImage *image))success;
+                 imageURL:(NSString *)url
+         placeholderImage:(UIImage *)placeholderImage
+                  success:(void (^)(UIImage *image))success;
 
 @end
