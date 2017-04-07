@@ -4,6 +4,10 @@
 * [1. 介绍](#1-介绍)
 * [2. 安装](#2-安装)
 * [3. 说明](#3-说明)
+  * [3.1 单例方法](#31-单例方法)
+  * [3.2 计算缓存](#32-计算缓存)
+  * [3.3 清理缓存](#33-清理缓存)
+  * [3.4 对图片缓存](#34-对图片缓存)
 * [4. 示例](#4-示例)
 
 ## 1. 介绍
@@ -29,14 +33,14 @@ CZImageCache_iOS 提供了关于图片缓存的多种功能：
 
 `CZImageCache` 使用单例模式构建，图片路径设置在 iOS 应用沙盒的 `/Library/Caches/ImageCache` 目录下，并且可以按需要计算和清理图片缓存或整个 `Caches` 文件夹缓存的大小。
 
-### 1. 单例方法
+### 3.1 单例方法
 
 ```objc
 /** 图片缓存类的单例方法 */
 + (instancetype)sharedInstance;
 ```
 
-### 2. 计算缓存
+### 3.2 计算缓存
 
 ```objc
 /** 计算所有缓存的大小，单位为 M，路径为 /Library/Caches */
@@ -45,7 +49,7 @@ CZImageCache_iOS 提供了关于图片缓存的多种功能：
 - (CGFloat)imageCacheSize;
 ```
 
-### 3. 清理缓存
+### 3.3 清理缓存
 
 ```objc
 /** 删除所有缓存，路径为 /Library/Caches */
@@ -54,7 +58,7 @@ CZImageCache_iOS 提供了关于图片缓存的多种功能：
 - (void)clearImageCacheWithCompletion:(void (^)(void))completion;
 ```
 
-### 4. 对图片缓存
+### 3.4 对图片缓存
 
 ```objc
 /**
