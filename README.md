@@ -83,9 +83,10 @@ CZImageCache_iOS 提供了关于图片缓存的多种功能：
 ## 4. 示例
 
 1. 在 `Main.storyboard` 中添加一些控件，显示缓存大小、清理缓存、加载显示图片。
+
 ![Main.storyboard](http://ompmj0bxx.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-04-07%2022.25.03.png "Main.storyboard")
 
-2. 设置一个通用的读取缓存的方法。
+2. 设置一个通用的读取缓存的方法，并显示在 label 上。
 
 ```objc
 /** 读取缓存大小，设置 UI */
@@ -106,5 +107,23 @@ CZImageCache_iOS 提供了关于图片缓存的多种功能：
                                              // 请求到图片后，会缓存到沙盒中，刷新沙盒中缓存的大小
                                              [self setupCacheLabel];
                                          }];
+```
+
+4. 清理缓存，并刷新 label 上的缓存大小。
+
+```objc
+/** 清理所有缓存，路径为 /Library/Caches */
+- (IBAction)clearAllCacheAction:(UIButton *)sender {
+    [[CZImageCache sharedInstance] clearCacheWithCompletion:^{
+        [self setupCacheLabel];
+    }];
+}
+
+/** 清理图片缓存，路径为 /Library/Caches/ImageCache */
+- (IBAction)clearImageCacheAction:(UIButton *)sender {
+    [[CZImageCache sharedInstance] clearImageCacheWithCompletion:^{
+        [self setupCacheLabel];
+    }];
+}
 ```
 
