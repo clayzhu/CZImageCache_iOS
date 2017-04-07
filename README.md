@@ -80,3 +80,5 @@ CZImageCache_iOS 提供了关于图片缓存的多种功能：
                   success:(void (^)(UIImage *image))success;
 ```
 
+## 4. 示例
+
