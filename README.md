@@ -82,3 +82,7 @@ CZImageCache_iOS 提供了关于图片缓存的多种功能：
 
 ## 4. 示例
 
+1. 在 `Main.storyboard` 中添加一些控件，显示缓存大小、清理缓存、加载显示图片。
+
+![Main.storyboard](http://ompmj0bxx.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-04-07%2022.25.03.png "Main.storyboard")
+
