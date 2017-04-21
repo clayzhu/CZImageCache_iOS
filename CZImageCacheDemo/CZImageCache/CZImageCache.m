@@ -141,6 +141,8 @@
 			success(image);
 		}
 	} else {	// 缓存中无该图片，需要网络请求
+        NSLog(@"RequestURL:%@", url);
+        
 		// 设置了默认图片则显示默认图片
 		imageView.image = placeholderImage;
 		// 图片在网络下载时显示一个菊花
