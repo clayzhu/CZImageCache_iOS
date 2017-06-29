@@ -15,9 +15,9 @@
 + (instancetype)sharedInstance;
 
 #pragma mark - 计算、清理缓存
-/** 计算所有缓存的大小，单位为 M，路径为 /Library/Caches */
+/** 计算所有缓存的大小，单位为 Bytes，路径为 /Library/Caches */
 - (CGFloat)cacheSize;
-/** 计算图片缓存的大小，单位为 M，路径为 /Library/Caches/ImageCache */
+/** 计算图片缓存的大小，单位为 Bytes，路径为 /Library/Caches/ImageCache */
 - (CGFloat)imageCacheSize;
 
 /** 删除所有缓存，路径为 /Library/Caches */

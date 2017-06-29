@@ -65,7 +65,7 @@
 		NSString *fileAbsolutePath = [self.cachePath stringByAppendingPathComponent:fileName];
 		folderSize += [self fileSizeAtPath:fileAbsolutePath];
 	}
-	return folderSize / (1024.0 * 1024.0);
+	return folderSize;
 }
 
 - (CGFloat)imageCacheSize {
@@ -78,7 +78,7 @@
 		NSString *fileAbsolutePath = [self.imageCachePath stringByAppendingPathComponent:fileName];
 		folderSize += [self fileSizeAtPath:fileAbsolutePath];
 	}
-	return folderSize / (1024.0 * 1024.0);
+	return folderSize;
 }
 
 - (void)clearCacheWithCompletion:(void (^)(void))completion {
