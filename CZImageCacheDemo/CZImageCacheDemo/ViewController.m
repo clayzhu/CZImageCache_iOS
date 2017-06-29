@@ -40,8 +40,8 @@
 
 /** 读取缓存大小，设置 UI */
 - (void)setupCacheLabel {
-    self.allCacheSizeLbl.text = [NSString stringWithFormat:@"全部缓存大小：%.2fM", [[CZImageCache sharedInstance] cacheSize]];
-    self.imageCacheSizeLbl.text = [NSString stringWithFormat:@"图片缓存大小：%.2fM", [[CZImageCache sharedInstance] imageCacheSize]];
+    self.allCacheSizeLbl.text = [NSString stringWithFormat:@"全部缓存大小：%.2fM", [[CZImageCache sharedInstance] cacheSize] / (1024.0 * 1024.0)];
+    self.imageCacheSizeLbl.text = [NSString stringWithFormat:@"图片缓存大小：%.2fM", [[CZImageCache sharedInstance] imageCacheSize] / (1024.0 * 1024.0)];
 }
 
 /** 清理所有缓存，路径为 /Library/Caches */
