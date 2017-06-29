@@ -43,9 +43,9 @@ CZImageCache_iOS 提供了关于图片缓存的多种功能：
 ### 3.2 计算缓存
 
 ```objc
-/** 计算所有缓存的大小，单位为 M，路径为 /Library/Caches */
+/** 计算所有缓存的大小，单位为 Bytes，路径为 /Library/Caches */
 - (CGFloat)cacheSize;
-/** 计算图片缓存的大小，单位为 M，路径为 /Library/Caches/ImageCache */
+/** 计算图片缓存的大小，单位为 Bytes，路径为 /Library/Caches/ImageCache */
 - (CGFloat)imageCacheSize;
 ```
 
@@ -96,8 +96,8 @@ CZImageCache_iOS 提供了关于图片缓存的多种功能：
 ```objc
 /** 读取缓存大小，设置 UI */
 - (void)setupCacheLabel {
-    self.allCacheSizeLbl.text = [NSString stringWithFormat:@"全部缓存大小：%.2fM", [[CZImageCache sharedInstance] cacheSize]];
-    self.imageCacheSizeLbl.text = [NSString stringWithFormat:@"图片缓存大小：%.2fM", [[CZImageCache sharedInstance] imageCacheSize]];
+    self.allCacheSizeLbl.text = [NSString stringWithFormat:@"全部缓存大小：%.2fM", [[CZImageCache sharedInstance] cacheSize] / (1024.0 * 1024.0)];
+    self.imageCacheSizeLbl.text = [NSString stringWithFormat:@"图片缓存大小：%.2fM", [[CZImageCache sharedInstance] imageCacheSize] / (1024.0 * 1024.0)];
 }
 ```
 
