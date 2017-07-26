@@ -157,7 +157,9 @@
 			dispatch_sync(dispatch_get_main_queue(), ^{
 				[data writeToFile:imagePath atomically:YES];
 				UIImage *image = [UIImage imageWithData:data];
-				imageView.image = image;
+                if (image) {    // 有图片则为 imageView 赋值
+                    imageView.image = image;
+                }
 				[indicator stopAnimating];
 				if (success) {
 					success(image);
